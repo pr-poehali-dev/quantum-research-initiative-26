@@ -150,11 +150,11 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="absolute inset-0 z-20 pointer-events-none">
+      <div className="absolute inset-0 z-20 pointer-events-none flex items-end justify-center">
         <img
-          src="/images/hously-foreground.png"
-          alt="Мраморная кухонная столешница"
-          className="w-full h-full object-cover object-center"
+          src="https://cdn.poehali.dev/projects/05de9440-60fb-45eb-9411-2eb1810d19cc/files/b0fdc281-1fa5-4e88-8c86-850a68525c5b.jpg"
+          alt="Самолёт Аэрофлот"
+          className="w-full max-w-4xl object-contain object-bottom"
         />
       </div>
 
