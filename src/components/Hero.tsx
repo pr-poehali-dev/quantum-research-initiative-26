@@ -150,13 +150,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="absolute inset-0 z-20 pointer-events-none flex items-end justify-center">
-        <img
-          src="https://cdn.poehali.dev/projects/05de9440-60fb-45eb-9411-2eb1810d19cc/files/b0fdc281-1fa5-4e88-8c86-850a68525c5b.jpg"
-          alt="Самолёт Аэрофлот"
-          className="w-full max-w-4xl object-contain object-bottom"
-        />
-      </div>
+
 
       {animationComplete && (
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce z-30">
