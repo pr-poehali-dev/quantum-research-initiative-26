@@ -1,30 +1,30 @@
 import { useEffect, useRef, useState } from "react"
-import { Home, Building, Armchair, Trees } from "lucide-react"
 import { HighlightedText } from "./HighlightedText"
+import Icon from "@/components/ui/icon"
 
 const expertiseAreas = [
   {
-    title: "Жилая архитектура",
-    description: "Создаем дома, которые сочетают красоту с комфортом, где каждое пространство служит и форме, и функции.",
-    icon: Home,
+    title: "Регистрация и посадка",
+    description: "Онлайн-регистрация, стойки самостоятельной регистрации и удобные выходы на посадку. Минимальное время ожидания — максимальный комфорт.",
+    icon: "Ticket",
   },
   {
-    title: "Коммерческие объекты",
+    title: "Зал ожидания и питание",
     description:
-      "Проектируем рабочие пространства, которые вдохновляют на продуктивность и отражают ценности передовых организаций.",
-    icon: Building,
+      "Просторные залы ожидания с бесплатным Wi-Fi, кафе и рестораны с блюдами местной и международной кухни, магазины duty-free и сувениры.",
+    icon: "Coffee",
   },
   {
-    title: "Дизайн интерьеров",
+    title: "Трансфер и парковка",
     description:
-      "Создаем интерьеры, которые гармонируют с архитектурной оболочкой, формируя целостный пространственный опыт.",
-    icon: Armchair,
+      "Удобный подъезд к терминалу, охраняемые парковки, трансфер в центр города и аренда автомобилей — всё для комфортного начала путешествия.",
+    icon: "Car",
   },
   {
-    title: "Градостроительство",
+    title: "VIP-зал и бизнес-услуги",
     description:
-      "Формируем сообщества через продуманную интеграцию общественных пространств, зданий и природных элементов.",
-    icon: Trees,
+      "Бизнес-зал с тихими рабочими зонами, конференц-помещениями, душевыми и премиальным сервисом для деловых пассажиров.",
+    icon: "Briefcase",
   },
 ]
 
@@ -59,18 +59,17 @@ export function Expertise() {
         <div className="max-w-3xl mb-20">
           <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наши услуги</p>
           <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
-            <HighlightedText>Экспертиза</HighlightedText>, отточенная
+            <HighlightedText>Сервис</HighlightedText>, созданный
             <br />
-            практикой
+            для пассажиров
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Каждый проект опирается на десятилетия совокупного опыта, создавая архитектуру, которая одновременно инновационна и вневременна.
+            Весь спектр услуг для комфортного путешествия — от регистрации до посадки. Мы делаем каждый перелёт приятным.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
           {expertiseAreas.map((area, index) => {
-            const Icon = area.icon
             return (
               <div
                 key={area.title}
@@ -91,7 +90,7 @@ export function Expertise() {
                     transitionDelay: `${index * 150}ms`,
                   }}
                 >
-                  <Icon className="w-10 h-10 mb-4 text-foreground" strokeWidth={1.25} />
+                  <Icon name={area.icon} className="w-10 h-10 mb-4 text-foreground" strokeWidth={1.25} />
                 </div>
                 <h3 className="text-xl font-medium mb-4">{area.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{area.description}</p>
